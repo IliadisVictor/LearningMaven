@@ -4,14 +4,26 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/***
+ *
+ * @author iliadisvictor The purpose of this class is it take in a txt of students grades
+ *         and create a histogram.
+ * @since April 2021
+ */
+
 public class HistogramGenerator {
+
+    /***
+     * Receives from command line the name of the text file to be used
+     * to dynamically generate an Integer array list containing the grades
+     * @param textname String
+     */
 
     public List<Integer> CreateArray(String textname) {
         /*
@@ -35,6 +47,15 @@ public class HistogramGenerator {
         return gradesvalues;
     }
 
+    /***
+     * Receives the Integer array list and uses it to create the histogram
+     * using the array to create the data set that will be used
+     * for the visualization
+     * @param grades List<Integer>
+     */
+
+
+
     public void GenerateChart(List<Integer> grades) {
         /*
          * The XYSeriesCollection object is a set XYSeries series (dataset) that
@@ -48,7 +69,7 @@ public class HistogramGenerator {
         XYSeries data = new XYSeries("random values");
 
         /*
-         * Populating the XYSeries data object from the input Integer array
+         * Populating the XYSeries data object from the input Integer array list
          * values.
          */
         int i=0;
