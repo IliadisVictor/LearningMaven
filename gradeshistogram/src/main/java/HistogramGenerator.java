@@ -1,3 +1,4 @@
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
@@ -21,22 +22,22 @@ public class HistogramGenerator {
 
     /***
      * Receives from command line the name of the text file to be used
-     * to dynamically generate an Integer array list containing the grades
+     *  generate an  array list containing the grades
      * @param textname String
      */
 
-    public List<Integer> CreateArray(String textname) {
+    public int[] CreateArray(String textname) {
         /*
         * Method for the storage of the frequency of every grade from a given file in a scale 0-10
          */
-        List<Integer> gradesvalues = new ArrayList<Integer>();
+        int[] gradesvalues = new int[11];
         try {
             File myObj = new File(textname);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 int i = Integer.parseInt(data);
-                gradesvalues.add(i);
+                gradesvalues[i]+=1;
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -48,15 +49,15 @@ public class HistogramGenerator {
     }
 
     /***
-     * Receives the Integer array list and uses it to create the histogram
+     * Receives the int array  and uses it to create the histogram
      * using the array to create the data set that will be used
      * for the visualization
-     * @param grades List<Integer>
+     * @param grades int[]
      */
 
 
 
-    public void GenerateChart(List<Integer> grades) {
+    public void GenerateChart(int[] grades) {
         /*
          * The XYSeriesCollection object is a set XYSeries series (dataset) that
          * can be visualized in the same chart
@@ -73,9 +74,8 @@ public class HistogramGenerator {
          * values.
          */
         int i=0;
-        for (Integer num : grades) {
-            data.add(i, num);
-            i += 1;
+        for (i=0;i< grades.length;i++) {
+            data.add(i, grades[i]);
         }
 
             // add the series to the dataset
@@ -87,7 +87,7 @@ public class HistogramGenerator {
 
         // Declare and initialize a createXYLineChart JFreeChart
         JFreeChart chart = ChartFactory.createXYLineChart
-                ("Grades Distribution", "Students", "Grades", dataset,
+                ("Grade Frequency", "Grade", "Frequency", dataset,
                 PlotOrientation.VERTICAL, legend, tooltips, urls);
 
         /*
@@ -106,7 +106,7 @@ public class HistogramGenerator {
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
         System.out.print("Input the name of the file with grades: ");
         String textname = scanner.nextLine(); // read user input
-        List<Integer> grades = obj.CreateArray(textname); // store array from grades text
+        int[] grades = obj.CreateArray(textname); // store array from grades text
         obj.GenerateChart(grades); // generate chart
     }
 }
