@@ -27,7 +27,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>histogrampackage.HistogramGenerator</mainClass>
+                            <mainClass>gradeshistogram.HistogramGenerator</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
