@@ -1,4 +1,6 @@
 Maven Project for beginners
+
+[![Build Status](https://travis-ci.com/IliadisVictor/LearningMaven.svg?token=qTw9aSMTzz4uyBZD81jx&branch=main)](https://travis-ci.com/github/IliadisVictor/LearningMaven)
 ---
 
 A fully working maven project created for learning purposes in software engineering  class of 2021.
