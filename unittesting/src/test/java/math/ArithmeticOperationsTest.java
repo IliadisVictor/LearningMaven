@@ -15,6 +15,11 @@ public class ArithmeticOperationsTest {
         AO.divide(5,0);
     }
 
+    @Test
+    public void testValidDivide(){
+        Assert.assertEquals(1,AO.divide(4,4),2);
+    }
+
     @Rule
     public ExpectedException Throw = ExpectedException.none();
 
