@@ -25,6 +25,7 @@ Basic Maven commands to handle the project.
 * `mvn verify`: It will install package into the local repository for local use.
 * `mvn deploy`: It will copy package to the remote repository for community use (optional).
  
+ 
 Tips
 ---
 * Suggested IDE [Intellij](https://www.jetbrains.com/idea/).
