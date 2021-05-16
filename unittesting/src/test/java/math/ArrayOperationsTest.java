@@ -14,9 +14,11 @@ public class ArrayOperationsTest {
     public static String Path ="src/test/resources/";
     @Test
     public void FindPrimesMockTest() {
+        //        Mock classes
         MyMath Mymath = mock(MyMath.class);
         FileIO fileIO = mock(FileIO.class);
 
+// Inputs for mocked obj
         when(Mymath.isPrime(1)).thenReturn(true);
         when(Mymath.isPrime(5)).thenReturn(true);
         when(Mymath.isPrime(6)).thenReturn(false);
@@ -24,6 +26,8 @@ public class ArrayOperationsTest {
         when(Mymath.isPrime(7)).thenReturn(true);
         when(Mymath.isPrime(8)).thenReturn(false);
 
+
+//        add file path
         String path = Path.concat("NumbersFileOne");
         when(fileIO.readFile(path)).thenReturn(new int[]{1,5,6,6,7,8});
 
