@@ -1,3 +1,5 @@
+package math;
+
 import math.ArithmeticOperations;
 import org.junit.Assert;
 import org.junit.Rule;

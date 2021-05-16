@@ -1,3 +1,5 @@
+package math;
+
 import math.MyMath;
 import org.junit.Assert;
 import org.junit.Test;

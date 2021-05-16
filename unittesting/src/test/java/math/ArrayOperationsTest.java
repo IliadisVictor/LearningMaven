@@ -1,3 +1,5 @@
+package math;
+
 import io.FileIO;
 import math.ArrayOperations;
 import math.MyMath;

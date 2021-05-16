@@ -1,3 +1,5 @@
+package io;
+
 import io.FileIO;
 import org.junit.Assert;
 import org.junit.Rule;
