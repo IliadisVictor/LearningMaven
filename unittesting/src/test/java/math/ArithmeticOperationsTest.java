@@ -19,6 +19,11 @@ public class ArithmeticOperationsTest {
     public ExpectedException Throw = ExpectedException.none();
 
     @Test
+    public void testYNotZero() {
+        Assert.assertEquals(0,AO.multiply(39,0));
+    }
+
+    @Test
     public void testMultiplyNegativeException() {
         Throw.expect(IllegalArgumentException.class);
         AO.multiply(-4,4);
