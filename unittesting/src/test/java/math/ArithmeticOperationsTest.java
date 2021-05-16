@@ -21,17 +21,20 @@ public class ArithmeticOperationsTest {
     @Test
     public void testYNotZero() {
         Assert.assertEquals(0,AO.multiply(39,0));
+
     }
 
     @Test
     public void testMultiplyNegativeException() {
         Throw.expect(IllegalArgumentException.class);
+        Throw.expectMessage("x & y should be >= 0");
         AO.multiply(-4,4);
     }
 
     @Test
     public void TestMultiplyMaxInteger(){
         Throw.expect(IllegalArgumentException.class);
+        Throw.expectMessage("The product does not fit in an Integer variable");
         AO.multiply(Integer.MAX_VALUE/3+3,3);
     }
 

@@ -25,6 +25,7 @@ public class FileIOTest {
     @Test
     public void TestFileNameNotFound(){
         Throw.expect(IllegalArgumentException.class);
+        Throw.expectMessage("Input file does not exist");
         String path = Path.concat("NumbersFileTo");
         IO.readFile(path);
     }
@@ -32,6 +33,7 @@ public class FileIOTest {
     @Test
     public void TestReadFileEmptyInput(){
         Throw.expect(IllegalArgumentException.class);
+        Throw.expectMessage("Given file is empty");
         String path = Path.concat("EmptyFile.txt");
         IO.readFile(path);
     }
