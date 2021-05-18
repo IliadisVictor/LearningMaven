@@ -1,4 +1,6 @@
 Maven Project for beginners
+
+[![Build Status](https://travis-ci.com/IliadisVictor/LearningMaven.svg?token=qTw9aSMTzz4uyBZD81jx&branch=main)](https://travis-ci.com/github/IliadisVictor/LearningMaven)
 ---
 
 A fully working maven project created for learning purposes in software engineering  class of 2021.
@@ -22,6 +24,7 @@ Basic Maven commands to handle the project.
 * `mvn verify`: It will check results of integration tests to ensure quality criteria are met.
 * `mvn verify`: It will install package into the local repository for local use.
 * `mvn deploy`: It will copy package to the remote repository for community use (optional).
+ 
  
 Tips
 ---
