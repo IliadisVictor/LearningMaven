@@ -5,12 +5,8 @@ jdk:
 
 branches:
   only:
-    - master
-    - development
-
-before_script:
-  - cd unittesting  # enter Maven root directory
-  - ls -la # this command just prints the contents of the current working directory.
+  - main
+  - development
 
 script:
   - mvn clean package jacoco:report
